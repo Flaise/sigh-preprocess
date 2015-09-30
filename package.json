@@ -1,0 +1,39 @@
+{
+  "name": "sigh-preprocess",
+  "version": "0.0.1",
+  "description": "sigh plugin for preprocess.",
+  "scripts": {
+    "test": "sigh"
+  },
+  "main": "lib/index",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Flaise/sigh-preprocess.git"
+  },
+  "keywords": [
+    "build",
+    "assets",
+    "pipeline",
+    "sigh-plugin"
+  ],
+  "author": "Flaise <Flaise.Saffron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Flaise/sigh-preprocess/issues"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "sigh-core": "^0.11.8"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "process-pool": "^0.3.4",
+    "sigh": "^0.12.22",
+    "sigh-babel": "^0.11.6",
+    "sigh-cli": "^0.2.8",
+    "sigh-mocha": "^0.1.2",
+    "source-map-support": "^0.3.2"
+  }
+}
