@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "lodash": "^3.10.1",
-    "sigh-core": "^0.11.8"
+    "sigh-core": "^0.11.8",
+    "preprocess": "git+https://github.com/Flaise/preprocess.git"
   },
   "devDependencies": {
     "babel": "^5.8.23",
