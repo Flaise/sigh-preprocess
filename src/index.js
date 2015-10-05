@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { mapEvents } from 'sigh-core/lib/stream'
+import {mapEvents} from 'sigh-core/lib/stream'
 
 
 function preprocessTask(opts) {
@@ -22,14 +22,18 @@ function adaptEvent(compiler) {
     return event => {
         if(event.type !== 'add' && event.type !== 'change')
             return event
+        
+        if(['tag', 'es6', 'js', 'html', 'css'].indexOf(event.fileType) < 0)
+            return event
 
         return compiler(_.pick(event, 'type', 'data', 'projectPath', 'fileType')).then(result => {
             event.data = result.data
 
             if(result.sourceMap)
                 event.applySourceMap(JSON.parse(result.sourceMap))
-
-            event.changeFileSuffix('js')
+                
+            if(event.fileType === 'es6' || event.fileType === 'tag')
+                event.changeFileSuffix('js')
             return event
         })
     }
